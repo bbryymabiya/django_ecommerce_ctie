@@ -1,0 +1,79 @@
+{% extends 'ctie/header.html' %}
+
+{% block content %}
+<html lang="en">
+  {% load static %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>product detail</title>
+    <link rel="stylesheet" href="{% static 'css/product-detail.css' %}" />
+
+    <script type="text/javascript">
+      var user = '{{request.user}}'
+
+      function getToken(name) {
+          let cookieValue = null;
+          if (document.cookie && document.cookie !== '') {
+              const cookies = document.cookie.split(';');
+              for (let i = 0; i < cookies.length; i++) {
+                  const cookie = cookies[i].trim();
+                  // Does this cookie string begin with the name we want?
+                  if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                      cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                      break;
+                  }
+              }
+          }
+          return cookieValue;
+      }
+      const csrftoken = getToken('csrftoken');
+
+    </script>
+  </head>
+  <body>
+    <div class="product-detail">
+      <div class="product-images">
+        <img class="product-image" src="{{ product.imageURL}}" />
+        <div class="product-moreImages">
+          <img class="more-images" src="{{ product.imageURL}}" />
+          <img class="more-images" src="{{ product.imageURL}}" />
+          <img class="more-images" src="{{ product.imageURL}}" />
+          <img class="more-images" src="{{ product.imageURL}}" />
+        </div>
+      </div>
+      <div class="product-infos">
+        <div class="text-large">
+          Price: <span class="item-price">D{{ product.price|floatformat:2}}</span>
+        </div>
+        <div class="text-large">
+          Title: <span class="item-title">{{product.name}}</span>
+        </div>
+        <div class="text-large">
+          Description:
+          <span class="item-description">{{ product.description}}</span>
+
+        </div>
+        <!-- <div class="order-quantity">
+        <h3>Quantity</h3>
+        <div class="quantity-select">
+          <button class="decriment quantity-control">-</button>
+          <input class="item-input" type="number" value="1" />
+          <button class="increment quantity-control">+</button>
+        </div>
+      </div> -->
+        <div class="navigation">
+            <button data-product="{{product.id}}" data-action="add" class="add-to-cart update-cart">Add to Cart</button>
+
+         <a href="{% url 'cart' %}" class="home-link"> Go to Cart </a>
+        </div>
+        <div class="Product-sizes"></div>
+      </div>
+      <script src="../cart.js"></script>
+    </div>
+  <script type=text/javascript src="{% static 'js/cart.js' %}"></script>
+  </body>
+</html>
+
+{% endblock %}

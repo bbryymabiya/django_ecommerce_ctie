@@ -1,0 +1,33 @@
+{% extends 'ctie/header.html' %}
+
+{% block content %}
+<html lang="en">
+  {% load static %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="{% static 'css/register-login.css' %}" />
+  </head>
+
+  <body>
+    <div class="login">
+      <form method="POST" action="" class="login-form">
+        {% csrf_token %}
+        {{form.as_p}}
+<!--        <label>Username</label>-->
+<!--        {{form.username}}-->
+<!--        <label>Email</label>-->
+<!--        {{form.email}}-->
+<!--        <label>Password</label>-->
+<!--        {{form.password1}}-->
+<!--        <label>Confirm Password</label>-->
+<!--        {{form.password2}}-->
+        <input class="login-btn" type="submit" value="Register">
+      </form>
+    </div>
+
+  </body>
+</html>
+{% endblock %}

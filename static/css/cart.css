@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Roboto:wght@100;300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto" sans-serif;
+  height: 100vh;
+  color: #191919;
+  background-color: #eaeded;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a,
+link {
+  text-decoration: none;
+  color: #333;
+}
+
+button,
+link {
+  cursor: pointer;
+}
+
+input:focus {
+  outline: none;
+}
+
+.cart {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin: auto;
+  max-width: 1100px;
+  padding: 30px 10px;
+}
+
+.cart h2 {
+  margin-bottom: 10px;
+}
+
+.item-info {
+  position: relative;
+  display: flex;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 5px 5px 2px #e8e8e8, -5px -5px 2px #e8e8e8;
+}
+
+.image-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-image {
+  width: 130px;
+  height: 170px;
+  margin-right: 20px;
+}
+
+.detail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+
+
+
+.detail span {
+  margin-left: 70px;
+  font-weight: bold;
+}
+
+.quan-control{
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.quantity-val{
+margin-right:10px;
+}
+
+.quantity-val span{
+font-size:20px;
+}
+
+.quan{
+	display: inline-block;
+	font-weight: 700;
+	padding-right:10px;
+
+
+}
+
+.chg-quantity{
+	width: 12px;
+	cursor: pointer;
+	display: block;
+	margin-top: 5px;
+	transition:.1s;
+	margin-left: 5px;
+}
+
+
+
+.item-total {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 70px;
+}
+
+.item-quantity {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 10px;
+}
+
+.quantity {
+  font-size: 24px;
+  padding: 2px 12px;
+  border: 1px solid #999;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.item-input {
+  padding: 7px 15px;
+  width: 80px;
+  border-radius: 3px;
+  border: 1px solid #999;
+  text-align: center;
+}
+
+.delete {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: #dc3545;
+  cursor: pointer;
+}
+
+.total-amount {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.total-amount h3 {
+  margin-right: 10px;
+}
+
+.cart-total {
+  padding: 30px;
+  margin: 40px 10px;
+  background-color: #eaeded;
+  height: 190px;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 5px 5px 2px #e8e8e8, -5px -5px 2px #e8e8e8;
+}
+
+.cart-total h4 {
+  margin-bottom: 15px;
+}
+
+.checkout-btn {
+  padding: 7px 20px;
+  background-color: #dc3545;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+}
+@media (max-width: 1200px) {
+  .cart {
+    width: 1000px;
+    padding: 20px;
+  }
+  .item-image {
+    width: 130px;
+    height: 170x;
+    margin-right: 10px;
+  }
+
+  .detail span {
+    margin-left: 50px;
+  }
+
+  .item-total {
+    margin-left: 50px;
+  }
+}
+@media (max-width: 768px) {
+  .cart {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+  }
+  .item-image {
+    width: 130px;
+    height: 170x;
+    margin-right: 10px;
+  }
+
+  .detail span {
+    margin-left: 80px;
+  }
+
+  .item-total {
+    margin-left: 80px;
+  }
+
+  .cart-total {
+    margin: 0;
+  }
+}
+@media (max-width: 500px) {
+  .cart {
+    padding: 10px;
+  }
+
+  .item-info {
+    flex-direction: column;
+    /* padding: 20px; */
+  }
+
+  .item-image {
+    width: 250px;
+    height: 200x;
+    margin-right: 10px;
+    /* object-fit: contain; */
+    padding-left: 20px;
+  }
+
+  .item-details {
+    padding: 20px;
+  }
+
+  .detail span {
+    margin-left: 20px;
+  }
+
+  .item-total {
+    margin-left: 20px;
+  }
+
+  .cart-total {
+    margin: 0;
+  }
+}
+@media (max-width: 350px) {
+  .cart {
+    padding: 10px;
+  }
+
+  .item-info {
+    flex-direction: column;
+  }
+
+  .item-image {
+    width: 150px;
+    height: 200x;
+    margin-right: 10px;
+    padding-left: 20px;
+  }
+}
+

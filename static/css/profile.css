@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Roboto:wght@100;300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto" sans-serif;
+  height: 100vh;
+  color: #191919;
+  background-color: #eaeded;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a,
+link {
+  text-decoration: none;
+  color: #333;
+}
+
+button,
+link {
+  cursor: pointer;
+}
+
+input:focus {
+  outline: none;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  background-color: #fff;
+  padding: 20px;
+  height: 100vh;
+  /* max-width: 1200px; */
+  margin: 0 auto;
+}
+
+.profile-left {
+  padding-left: 20px;
+  order: 1;
+}
+
+.profile-left p {
+  padding: 10px;
+  margin: 5px 0;
+  background-color: #eaeded;
+  cursor: pointer;
+}
+
+.profile-left p:hover {
+  background-color: #e8e8e8;
+}
+
+.profile-center {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+  order: 2;
+}
+
+.my-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #eaeded;
+  height: 70px;
+}
+
+.my-details div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.me i {
+  font-size: 30px;
+  color: #555;
+  margin-right: 5px;
+}
+
+.details-edit i {
+  color: #555;
+  margin-left: 5px;
+}
+
+.calendar {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #dc3545;
+  color: #fff;
+  padding: 47px 0;
+  font-size: 1.6rem;
+  order: 3;
+}
+
+@media (max-width: 768px) {
+  .profile {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .profile-left {
+    padding-top: 0px;
+    padding-left: 5px;
+    order: 2;
+  }
+
+  .profile-center {
+    order: 1;
+  }
+  .calendar {
+    display: none;
+  }
+}
+
+
+
+.container {
+    background-color: white;
+    margin-top: 20px;
+}
+
+.customer-info {
+    font-weight: bold;
+
+}
+
+.col-md-4 {
+    border-right: 6px solid red;
+}
+
+.cart-row{
+	display: flex;
+    align-items: flex-stretch;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ececec;
+}
+
+.row-image{
+	width: 100px;
+}
+
+.row{
+    border-bottom: 1px solid black;
+}

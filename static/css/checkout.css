@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Roboto:wght@100;300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto" sans-serif;
+  height: 100vh;
+  color: #191919;
+  background-color: #eaeded;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a,
+link {
+  text-decoration: none;
+  color: #333;
+}
+
+button,
+link {
+  cursor: pointer;
+}
+
+input:focus {
+  outline: none;
+}
+
+.checkout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin: auto;
+  padding: 50px;
+}
+
+.checkout-detail {
+  height: 100%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 2px #e8e8e8, -5px -5px 2px #e8e8e8;
+}
+.checkout h2 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#checkout-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  padding-bottom: 30px;
+  margin: auto;
+}
+
+.checkout-labe {
+  font-size: 20px;
+}
+
+.checkout-input {
+  margin: 10px 0;
+  padding: 10px 15px;
+  border: 1px solid #888;
+  border-radius: 3px;
+}
+
+.checkout-input:focus {
+  border: 1px solid #999;
+}
+
+.agent-select label {
+  margin-right: 10px;
+}
+
+.agent-select select {
+  padding: 3px 10px;
+}
+.agent-select select:focus {
+  outline: none;
+}
+
+.confirm-checkout {
+  padding: 15px 30px;
+  margin: 0px 10px;
+  background-color: #eaeded;
+  height: 155px;
+  width: 100%;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #fff;
+}
+
+#checkout-submit {
+  margin-top: 10px;
+  padding: 10px 30px;
+  background-color: #dc3545;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+}
+
+@media (max-width: 1100px) {
+  .checkout {
+    grid-template-columns: 1fr;
+  }
+
+  .confirm-checkout {
+    margin: 15px 0;
+  }
+}
+@media (max-width: 500px) {
+  .checkout {
+    padding: 0;
+  }
+}
+
+.shipment-option {
+    margin-bottom: 50px;
+}
+
+
+.shipment-option label {
+  margin-right: 10px;
+}
+
+.shipment-option select {
+  padding: 3px 10px;
+}
+.shipment-option select:focus {
+  outline: none;
+}
