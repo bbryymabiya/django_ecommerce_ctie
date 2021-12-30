@@ -30,17 +30,17 @@
       </div>
 
       <div class="col-md-8">
-        <h3 style="text-align:center;">ORDERS MADE</h3><hr>
+        <h3 style="text-align:center;">COMPLETED TRANSACTIONS</h3><hr>
         <div class="cart-row">
-          <div style="flex:1"><strong>Transaction ID</strong></div>
-          <div style="flex:1"><strong>Date Ordered</strong></div>
+          <div style="flex:2"><strong>Transaction ID</strong></div>
+          <div style="flex:2"><strong>Date Ordered</strong></div>
           <div style="flex:1"><strong>Total Amount</strong></div>
           <div style="flex:1"><strong>Total Items</strong></div>
         </div>
         {% for order in orders %}
           <div class="cart-row">
-            <div style="flex:1"><p>{{order.transaction_id}}</p></div>
-            <div style="flex:1"><p>{{order.date_ordered}}</p></div>
+            <div style="flex:2"><p>{{order.transaction_id}}</p></div>
+            <div style="flex:2"><p>{{order.date_ordered}}</p></div>
             <div style="flex:1"><p>D{{order.get_cart_total|floatformat:2}}</p></div>
             <div style="flex:1"><p>{{order.get_cart_items}}</p></div>
           </div>
@@ -50,9 +50,24 @@
     </div>
     <div class="row">
       <h3 style="text-align:center;">Pending Orders</h3><hr>
+<!--      <div class="cart-row">-->
+<!--        <div style="flex:2"></div>-->
+<!--        <div style="flex:2"><strong>Item</strong></div>-->
+<!--        <div style="flex:1"><strong>Quantity</strong></div>-->
+<!--        <div style="flex:1"><strong>Price</strong></div>-->
+<!--      </div>-->
+<!--      {% for item in items %}-->
+<!--      <div class="cart-row">-->
+<!--        <div style="flex:2"><img class="row-image" src="{{item.product.imageURL}}"></div>-->
+<!--        <div style="flex:2">{{item.product.name}}</div>-->
+<!--        <div style="flex:1">-->
+<!--          <p class="quantity">{{item.quantity}}</p>-->
+<!--        </div>-->
+<!--        <div style="flex:1">${{item.get_total|floatformat:2}}</div>-->
+<!--      </div>-->
+<!--      {% endfor %}-->
 
-
-    </div>
+<!--    </div>-->
 
 
 

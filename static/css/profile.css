@@ -157,4 +157,13 @@ input:focus {
 
 .row{
     border-bottom: 1px solid black;
+    margin-bottom: 20px;
+}
+
+.chg-quantity{
+	width: 12px;
+	cursor: pointer;
+	display: block;
+	margin-top: 5px;
+	transition:.1s;
 }

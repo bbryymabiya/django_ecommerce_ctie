@@ -221,3 +221,13 @@ SINGLE PRODUCT SECTION */
     height: 180px;
   }
 }
+
+#category-type{
+    margin-top:10px;
+    text-align:center;
+
+}
+
+.category-type{
+    justify-content:center;
+}

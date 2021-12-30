@@ -4,9 +4,19 @@ import uuid
 
 # Create your models here.
 
+categories = (
+    ('Men', 'Men'),
+    ('Women', 'Women'),
+    ('Kids', 'Kids'),
+    ('Electronics', 'Electronics'),
+    ('Machines', 'Machines'),
+    ('Household', 'Household'),
+)
+
 
 class Product(models.Model):
     name = models.CharField(max_length=200, null=True)
+    category = models.CharField(max_length=15, choices=categories, null=True, blank=True)
     search_by = models.CharField(max_length=200, null=True)
     price = models.FloatField()
     image = models.ImageField(null=True, blank=True)

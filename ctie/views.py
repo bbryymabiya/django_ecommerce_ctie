@@ -124,8 +124,10 @@ def logoutUser(request):
 
 def userProfile(request):
     customer = request.user.customer
-    order = Order.objects.filter(complete=True)
-    context = {'customer': customer, 'orders': order}
+    order = Order.objects.filter(customer=customer, complete=True)
+    order_unfinished = Order.objects.get(customer=customer, complete=False)
+    items = order_unfinished.orderitem_set.all()
+    context = {'customer': customer, 'orders': order, 'items': items, 'order_unfinished': order_unfinished}
     return render(request, 'ctie/profile.html', context)
 
 
@@ -189,6 +191,16 @@ def processOrder(request):
     return JsonResponse('Order Submitted', safe=False)
 
 
+def category(request):
+    if 'c' in request.GET:
+        c = request.GET['c']
+        products = Product.objects.filter(category=c)
+        category = products[0].category
+
+    context = {'categories': products, 'category':category}
+    return render(request, 'ctie/category.html', context)
+
+
 class CustomerRegistrationView(CreateView):
     template_name = 'register.html'
     form_class = CustomerRegistrationForm
@@ -202,3 +214,5 @@ class CustomerRegistrationView(CreateView):
         form.instance.user = user
 
         return super().form_valid(form)
+
+
